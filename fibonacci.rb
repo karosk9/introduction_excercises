@@ -1,6 +1,5 @@
-
-puts "Ile liczb ciągu Fibonacciego ma wyświetlić program?"
-num=gets.chomp.to_i
+#!/usr/bin/env ruby
+num=ARGV[0].to_i
 fib = []
 
 def fibonacci(number)
