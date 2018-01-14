@@ -8,7 +8,6 @@ valid=true
 month = pesel[2..3].to_i
 day = pesel[4..5].to_i
 
-
 if pesel.length != 11
 	valid=false
 end
@@ -39,7 +38,7 @@ end
 
 if valid
 	puts "Pesel #{pesel} jest prawidłowy."
-	puts "#{gender(pesel)}"
+	puts gender(pesel)
 	puts "data urodzenia: #{"%02d" % day}-#{"%02d" % month}-#{year}"	
 else
 	puts "Pesel #{pesel} jest nieprawidłowy."

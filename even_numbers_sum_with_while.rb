@@ -1,6 +1,6 @@
-# Napisz funkcję, która liczy sumę parzystych liczb z zakresu od 1..n. korzystając z wybranej pętli, np. while
-
-def even_sum (n,sum=0)
+def even_sum (sum=0)
+	puts "Program oblicza sumę liczb parzystych z zakresu 1..n\nWprowadź liczbę"
+	n = gets.chomp.to_i
 	while n>0
 		if n%2==0
 			sum = sum + n
@@ -10,5 +10,5 @@ def even_sum (n,sum=0)
 	sum
 end
 
-puts even_sum(5)
+puts even_sum
 

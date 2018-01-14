@@ -11,11 +11,10 @@ def find_index(array,value)
 	end
 
 	if indices.empty?
-		indices = "not found"
+		"not found"
+	else
+		indices
 	end
-
-	puts ""  #dla zwiększenia czytelności i pogrupowania wyświetlanych wyników
-	return indices
 end
 
 puts find_index([1, 2, 3, 4, 5], 3)

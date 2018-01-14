@@ -1,37 +1,42 @@
 # prosty kalkulator
-def add(num1=0,num2=0) 
-	puts "Enter first number: "
-	num1=gets.chomp.to_f
-	puts "Enter second number: "
-	num2=gets.chomp.to_f
-	puts "#{num1} + #{num2} = #{num1+num2}"
+class Calcutator
+		attr_accessor :input1, :input2
+
+	def initialize(input1=0, input2=0)
+		@input1 = input1
+		@input2 = input2
+	end
+
+	def user_input1
+		puts "Enter first number: "
+		input1=gets.chomp.to_f
+	end
+
+	def user_input2
+		puts "Enter second number: "
+		input2=gets.chomp.to_f
+	end
+	
+	def add 
+		puts user_input1 + user_input2
+	end
+
+	def subtract
+		puts user_input1 - user_input2
+	end
+
+	def multiply
+		puts user_input1 * user_input2
+	end
+
+	def divide
+		puts user_input1/user_input2
+	rescue ZeroDivisionError
+		Float::INFINITY
+	end
 end
 
-def subtract(num1=0,num2=0)
-	puts "Enter first number: "
-	num1=gets.chomp.to_f
-	puts "Enter second number: "
-	num2=gets.chomp.to_f
-	puts "#{num1} - #{num2} = #{num1-num2}"
-end
-
-def multiply(num1=0,num2=0)
-	puts "Enter first number: "
-	num1=gets.chomp.to_f
-	puts "Enter second number: "
-	num2=gets.chomp.to_f
-	puts "#{num1} * #{num2} = #{num1*num2}"
-end
-
-def divide(num1=0,num2=1)
-	puts "Enter first number: "
-	num1=gets.chomp.to_f
-	puts "Enter second number: "
-	num2=gets.chomp.to_f
-	puts "#{num1}/#{num2} = #{num1/num2}"
-rescue ZeroDivisionError
-	Float::INFINITY
-end
+calc = Calcutator.new
 
 loop do
 puts "Choose operation:\n 1. Add numbers\n 2. Subtract numbers 
@@ -39,16 +44,16 @@ puts "Choose operation:\n 1. Add numbers\n 2. Subtract numbers
 print "What is your choice?:"
 input = gets.chomp.to_i
 
-	case 
-	when input ==  1
-		add
-	when input ==  2
-		subtract
-	when input ==  3
-		multiply
-	when input ==  4
-		divide
-	when input ==  5
+	case input
+	when 1
+		calc.add
+	when 2
+		calc.subtract
+	when 3
+		calc.multiply
+	when 4
+		calc.divide
+	when 5
 		puts "Bye, bye"
 	end
 break if input==5

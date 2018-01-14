@@ -1,17 +1,15 @@
 #program zwraca z tablicy pierwszy element równy wartości value lub wyświeta komunikat "not found" jeśli w tabeli nie ma takiej wartości.
 def find_index(array,value)
   k=0
-  result = "not found"
 	while k<array.length
 	 	if array[k]==value
-			result=k 
+			return k 
+			break
 		end
-	break if result==k 
-	k=k+1 
+		k+=1
 	end
-return result	
+		"not found"
 end
-
 
 puts find_index([1, 2, 3, 4, 5], 3)
 puts find_index([5, 8, 6, 2, 2, 10], 2)

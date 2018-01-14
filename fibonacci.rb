@@ -3,13 +3,12 @@ num=ARGV[0].to_i
 fib = []
 
 def fibonacci(number)
-	case 
-	when number>1
-	(fibonacci(number-1))+(fibonacci(number-2))	
-	when number==1
-	1
-	when number==0
-	0
+	if number>1
+		(fibonacci(number-1))+(fibonacci(number-2))	
+	elsif number == 1
+		1
+	else
+		0
 	end
 end	
 puts "podaj liczbę całkowitą dodatnią" if num<0
