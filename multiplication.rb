@@ -1,10 +1,9 @@
 #program, który wyświetla tabliczkę mnożenia 10x10.
 class MultiplicationTable
-	attr_accessor :body, :num
+	attr_accessor :body
 
-	def initialize(body = "",num=1)
+	def initialize(body = "")
 		@body = body
-		@num = num
 	end
 
 	def create_header
@@ -45,7 +44,7 @@ class MultiplicationTable
 	end
 end
 
-multiplication = MultiplicationTable.new
+multiplication = MultiplicationTable.new("")
 multiplication.create_complete_multiplication_table
 
 

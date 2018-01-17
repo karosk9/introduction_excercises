@@ -55,6 +55,6 @@ input = gets.chomp.to_i
 		calc.divide
 	when 5
 		puts "Bye, bye"
+		break
 	end
-break if input==5
 end
